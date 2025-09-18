@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-	public class Vehicle
+	public abstract class Vehicle
 	{
 		private string _liscenceplate;
 
@@ -20,14 +20,8 @@ namespace Bridge
 			}
 		}
 
-		public virtual double Price()
-		{
-			return 0;
-		}
-		public virtual string VehicleType()
-		{
-			return string.Empty;
-		}
+		public abstract double Price(bool brobizz);
+		public abstract string VehicleType();
 
 	}
 }

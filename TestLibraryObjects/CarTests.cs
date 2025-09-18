@@ -12,7 +12,7 @@ namespace TestLibraryObjects
 			Vehicle car = new Car("239-XC");
 
 			// Act
-			double price = car.Price();
+			double price = car.Price(false); // Price without brobizz
 			double res = 230;
 
 			// Assert
@@ -40,10 +40,27 @@ namespace TestLibraryObjects
 		public void TestLengthOfCarLiscencePlate()
 		{
 			// Arrange
-			Vehicle car = new Car("832-RT-9RK");
+			string lp = "832-RT-9RK"; // Exceeds 7 characters
+
+			// Act
+			Vehicle car = new Car(lp);
 
 			// Assert
 			Assert.Fail();
+
+		}
+
+		[TestMethod]
+		public void TestCarBrobizz()
+		{
+			// Arrange
+			Vehicle car = new Car("999-KT-009");
+
+			// Act
+			double price = car.Price(true);
+
+			// Assert
+			Assert.AreEqual(price, 207);
 
 		}
 	}

@@ -20,9 +20,17 @@
         /// Price for the car to cross the bridge
         /// </summary>
         /// <returns>type: double - Price of a bridge ticket</returns>
-		public override double Price()
+		public override double Price(bool brobizz)
         {
-            return 230;
+            double price = 230;
+            if (brobizz)
+            {
+                return price - price / 10;
+            }
+            else
+            {
+                return price;
+            }
         }
 
         /// <summary>

@@ -17,7 +17,7 @@ namespace TestLibraryObjects
 			Vehicle car = new MC("832-RT");
 
 			// Act
-			double price = car.Price();
+			double price = car.Price(false); // Price without brobizz
 			double res = 120;
 
 			// Assert
@@ -44,11 +44,28 @@ namespace TestLibraryObjects
 		[ExpectedException(typeof(ArgumentException))]
 		public void TestLengthOfMCLiscensePlate()
 		{
-			// Arrange
-			Vehicle mc = new MC("832-RT-9RK");
+			// Arrange 
+			string lp = "832-RT-9RK"; // Exceeds 7 characters
+
+			// Act
+			Vehicle mc = new MC(lp);
 
 			// Assert
 			Assert.Fail();
+
+		}
+
+		[TestMethod]
+		public void TestMCBrobizz()
+		{
+			// Arrange
+			Vehicle mc = new MC("888-YT-918");
+
+			// Act
+			double price = mc.Price(true);
+
+			// Assert
+			Assert.AreEqual(price, 108);
 
 		}
 	}

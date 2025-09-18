@@ -25,9 +25,17 @@ namespace Bridge
 		/// Price for the MC to cross the bridge
 		/// </summary>
 		/// <returns></returns>
-		public override double Price()
+		public override double Price(bool brobizz)
 		{
-			return 120;
+			double price = 120;
+			if (brobiz)
+			{
+				return price - price / 10;
+			}
+			else
+			{
+				return price;
+			}
 		}
 
 		/// <summary>
