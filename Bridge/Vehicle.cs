@@ -8,7 +8,18 @@ namespace Bridge
 {
 	public abstract class Vehicle
 	{
-		public string Liscenceplate { get; set; }
+		private string _liscenceplate;
+		public string Liscenceplate
+		{
+			get { return _liscenceplate; } 
+			set
+			{
+				if (_liscenceplate.Length > 7)
+				{
+					throw new ArgumentException("The liscense plate cannot be longer than 7 characters"); ;
+				}
+			}
+		}
 		public DateTime Date { get; set; }
 		public abstract double Price();
 		public abstract string VehicleType();

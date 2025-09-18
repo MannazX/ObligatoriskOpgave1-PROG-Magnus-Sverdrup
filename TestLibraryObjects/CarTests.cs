@@ -34,5 +34,17 @@ namespace TestLibraryObjects
 			Assert.AreEqual(vehicle, res);
 
 		}
+
+		[TestMethod]
+		[ExpectedException(typeof(ArgumentException))]
+		public void TestLengthOfLiscencePlate()
+		{
+			// Arrange
+			Vehicle car = new Car("239-XC-8R", new DateTime(2025, 9, 1));
+
+			// Assert
+			Assert.Fail();
+
+		}
 	}
 }

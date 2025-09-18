@@ -39,5 +39,17 @@ namespace TestLibraryObjects
 			Assert.AreEqual(vehicle, res);
 
 		}
+
+		[TestMethod]
+		[ExpectedException(typeof(ArgumentException))]
+		public void TestLengthOfLiscensePlate()
+		{
+			// Arrange
+			Vehicle mc = new MC("832-RT", new DateTime(2025, 9, 1));
+
+			// Asser
+			Assert.Fail();
+
+		}
 	}
 }
