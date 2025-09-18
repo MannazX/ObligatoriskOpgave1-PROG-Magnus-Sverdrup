@@ -25,7 +25,7 @@
             double price = 230;
             if (brobizz)
             {
-                return price - price / 10;
+                return price - (price / 10);
             }
             else
             {

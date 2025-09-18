@@ -54,7 +54,7 @@ namespace TestLibraryObjects
 		public void TestCarBrobizz()
 		{
 			// Arrange
-			Vehicle car = new Car("999-KT-009");
+			Vehicle car = new Car("999-KT");
 
 			// Act
 			double price = car.Price(true);

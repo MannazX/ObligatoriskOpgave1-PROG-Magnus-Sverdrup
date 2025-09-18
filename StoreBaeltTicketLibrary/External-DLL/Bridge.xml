@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="M:Bridge.Car.#ctor(System.String)">
+            <summary>
+            Constructor for the instanciation of the Car object
+            </summary>
+            <param name="liscenseplate"></param>
+        </member>
+        <member name="M:Bridge.Car.Price(System.Boolean)">
+            <summary>
+            Price for the car to cross the bridge
+            </summary>
+            <returns>type: double - Price of a bridge ticket</returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            Vehicle Type of the vehicle crossing the bridge
+            </summary>
+            <returns>type: string - Name of vehicle type</returns>
+        </member>
+        <member name="M:Bridge.MC.#ctor(System.String)">
+            <summary>
+            Constructor for the instanciation of the Car object 
+            </summary>
+            <param name="liscenseplate"></param>
+        </member>
+        <member name="M:Bridge.MC.Price(System.Boolean)">
+            <summary>
+            Price for the MC to cross the bridge
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            Vehicle Type for the vehicle crossing the bridge
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

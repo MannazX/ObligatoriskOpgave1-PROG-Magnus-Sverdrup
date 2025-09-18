@@ -28,9 +28,9 @@ namespace Bridge
 		public override double Price(bool brobizz)
 		{
 			double price = 120;
-			if (brobiz)
+			if (brobizz)
 			{
-				return price - price / 10;
+				return price - (price / 10);
 			}
 			else
 			{

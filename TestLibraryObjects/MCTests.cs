@@ -59,7 +59,7 @@ namespace TestLibraryObjects
 		public void TestMCBrobizz()
 		{
 			// Arrange
-			Vehicle mc = new MC("888-YT-918");
+			Vehicle mc = new MC("888-YT");
 
 			// Act
 			double price = mc.Price(true);
