@@ -5,9 +5,8 @@ namespace StoreBaeltTicketLibrary
 	public class Ticket
 	{
 		public DayOfWeek Date { get; set; }
-		public Vehicle Car { get; set; }
+		public Vehicle Vehicle { get; set; }
 		public double Price { get; set; }
-		public bool Brobizz { get; set; }
 		
 
 		public Ticket(DayOfWeek date, Vehicle vehicle, bool brobizz)
@@ -33,7 +32,8 @@ namespace StoreBaeltTicketLibrary
 			{
 				Price = vehicle.Price(brobizz);
 			}
-			
+			Date = date;
+			Vehicle = vehicle;
 		}
 
 		public double TicketPrice()

@@ -2,7 +2,6 @@
 {
     public class Car : Vehicle
     {
-        private string _liscense;
         public string Liscenseplate { get; set; }
         public DateTime Date { get; set; }
 

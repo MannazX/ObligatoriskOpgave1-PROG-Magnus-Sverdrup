@@ -35,9 +35,9 @@ namespace TestLibraryObjects
 
 			// Act
 			double price = ticket.TicketPrice();
-
+			
 			// Assert
-			Assert.AreEqual(price, 27);
+			Assert.AreEqual(price, 207);
 
 		}
 
