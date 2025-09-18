@@ -9,7 +9,7 @@ namespace TestLibraryObjects
 		public void TestCarPrice()
 		{
 			// Arrange
-			Car car = new Car("239-XC", new DateTime(2025, 9, 1));
+			Vehicle car = new Car("239-XC", new DateTime(2025, 9, 1));
 
 			// Act
 			double price = car.Price();
@@ -24,7 +24,7 @@ namespace TestLibraryObjects
 		public void TestCarVehicleType()
 		{
 			// Arrange
-			Car car = new Car("239-XC", new DateTime(2025, 9, 1));
+			Vehicle car = new Car("239-XC", new DateTime(2025, 9, 1));
 
 			// Act
 			string vehicle = car.VehicleType();

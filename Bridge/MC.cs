@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-	public class MC
+	public class MC : Vehicle
 	{
 		public string Liscenseplate { get; set; }
 		public DateTime Date { get; set; }
@@ -26,7 +26,7 @@ namespace Bridge
 		/// Price for the MC to cross the bridge
 		/// </summary>
 		/// <returns></returns>
-		public double Price()
+		public override double Price()
 		{
 			return 120;
 		}
@@ -35,7 +35,7 @@ namespace Bridge
 		/// Vehicle Type for the vehicle crossing the bridge
 		/// </summary>
 		/// <returns></returns>
-		public string VehicleType()
+		public override string VehicleType()
 		{
 			return "MC";
 		}

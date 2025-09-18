@@ -14,7 +14,7 @@ namespace TestLibraryObjects
 		public void TestMCPrice()
 		{
 			// Arrange
-			MC car = new MC("832-RT", new DateTime(2025, 9, 1));
+			Vehicle car = new MC("832-RT", new DateTime(2025, 9, 1));
 
 			// Act
 			double price = car.Price();
@@ -29,7 +29,7 @@ namespace TestLibraryObjects
 		public void TestMCVehicleType()
 		{
 			// Arrange
-			MC car = new MC("832-RT", new DateTime(2025, 9, 1));
+			Vehicle car = new MC("832-RT", new DateTime(2025, 9, 1));
 
 			// Act
 			string vehicle = car.VehicleType();

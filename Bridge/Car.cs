@@ -1,6 +1,6 @@
 ﻿namespace Bridge
 {
-    public class Car
+    public class Car : Vehicle
     {
         public string Liscenseplate { get; set; }
         public DateTime Date { get; set; }
@@ -20,7 +20,7 @@
         /// Price for the car to cross the bridge
         /// </summary>
         /// <returns>type: double - Price of a bridge ticket</returns>
-		public double Price()
+		public override double Price()
         {
             return 230;
         }
@@ -29,9 +29,9 @@
         /// Vehicle Type of the vehicle crossing the bridge
         /// </summary>
         /// <returns>type: string - Name of vehicle type</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }
-    }
+	}
 }
