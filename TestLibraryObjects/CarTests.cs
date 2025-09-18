@@ -9,7 +9,7 @@ namespace TestLibraryObjects
 		public void TestCarPrice()
 		{
 			// Arrange
-			Vehicle car = new Car("239-XC", new DateTime(2025, 9, 1));
+			Vehicle car = new Car("239-XC");
 
 			// Act
 			double price = car.Price();
@@ -24,7 +24,7 @@ namespace TestLibraryObjects
 		public void TestCarVehicleType()
 		{
 			// Arrange
-			Vehicle car = new Car("239-XC", new DateTime(2025, 9, 1));
+			Vehicle car = new Car("239-XC");
 
 			// Act
 			string vehicle = car.VehicleType();
@@ -37,10 +37,10 @@ namespace TestLibraryObjects
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentException))]
-		public void TestLengthOfLiscencePlate()
+		public void TestLengthOfCarLiscencePlate()
 		{
 			// Arrange
-			Vehicle car = new Car("239-XC-8R", new DateTime(2025, 9, 1));
+			Vehicle car = new Car("832-RT-9RK");
 
 			// Assert
 			Assert.Fail();

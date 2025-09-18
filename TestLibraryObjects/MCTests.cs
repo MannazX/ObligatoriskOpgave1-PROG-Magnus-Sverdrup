@@ -14,7 +14,7 @@ namespace TestLibraryObjects
 		public void TestMCPrice()
 		{
 			// Arrange
-			Vehicle car = new MC("832-RT", new DateTime(2025, 9, 1));
+			Vehicle car = new MC("832-RT");
 
 			// Act
 			double price = car.Price();
@@ -29,7 +29,7 @@ namespace TestLibraryObjects
 		public void TestMCVehicleType()
 		{
 			// Arrange
-			Vehicle car = new MC("832-RT", new DateTime(2025, 9, 1));
+			Vehicle car = new MC("832-RT");
 
 			// Act
 			string vehicle = car.VehicleType();
@@ -42,12 +42,12 @@ namespace TestLibraryObjects
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentException))]
-		public void TestLengthOfLiscensePlate()
+		public void TestLengthOfMCLiscensePlate()
 		{
 			// Arrange
-			Vehicle mc = new MC("832-RT", new DateTime(2025, 9, 1));
+			Vehicle mc = new MC("832-RT-9RK");
 
-			// Asser
+			// Assert
 			Assert.Fail();
 
 		}

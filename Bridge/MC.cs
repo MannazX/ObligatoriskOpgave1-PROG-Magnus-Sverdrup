@@ -15,11 +15,10 @@ namespace Bridge
 		/// Constructor for the instanciation of the Car object 
 		/// </summary>
 		/// <param name="liscenseplate"></param>
-		/// <param name="date"></param>
-		public MC(string liscenseplate, DateTime date)
+		public MC(string liscenseplate) : base(liscenseplate)
 		{
-			Liscenseplate = liscenseplate;
-			Date = date;
+			Liscenceplate = liscenseplate;
+			Date = DateTime.Today;
 		}
 
 		/// <summary>

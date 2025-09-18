@@ -6,23 +6,28 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-	public abstract class Vehicle
+	public class Vehicle
 	{
 		private string _liscenceplate;
-		public string Liscenceplate
+
+		public string Liscenceplate { get; set; }
+
+		public Vehicle(string liscenseplate)
 		{
-			get { return _liscenceplate; } 
-			set
+			if (liscenseplate.Length > 7)
 			{
-				if (_liscenceplate.Length > 7)
-				{
-					throw new ArgumentException("The liscense plate cannot be longer than 7 characters"); ;
-				}
+				throw new ArgumentException("The liscense plate cannot exceed 7 characters");
 			}
 		}
-		public DateTime Date { get; set; }
-		public abstract double Price();
-		public abstract string VehicleType();
+
+		public virtual double Price()
+		{
+			return 0;
+		}
+		public virtual string VehicleType()
+		{
+			return string.Empty;
+		}
 
 	}
 }

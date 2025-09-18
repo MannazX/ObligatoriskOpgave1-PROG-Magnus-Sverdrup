@@ -2,18 +2,18 @@
 {
     public class Car : Vehicle
     {
+        private string _liscense;
         public string Liscenseplate { get; set; }
         public DateTime Date { get; set; }
 
-        /// <summary>
-        /// Constructor for the instanciation of the Car object
-        /// </summary>
-        /// <param name="liscenseplate">type: string - Liscence plate for the car</param>
-        /// <param name="date">type: DateTime - Date for the car registered to cross the bridge</param>
-		public Car(string liscenseplate, DateTime date)
+		/// <summary>
+		/// Constructor for the instanciation of the Car object
+		/// </summary>
+		/// <param name="liscenseplate"></param>
+		public Car(string liscenseplate) : base(liscenseplate)
 		{
-            Liscenseplate = liscenseplate;
-            Date = date;
+            Liscenceplate = liscenseplate;
+            Date = DateTime.Today;
 		}
 
         /// <summary>
