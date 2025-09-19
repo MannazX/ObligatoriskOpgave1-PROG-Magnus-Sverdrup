@@ -13,7 +13,7 @@ namespace StoreBaeltTicketLibrary
 
 		#region Constructor
 		/// <summary>
-		/// Constructor - Tickets for Vehicles on Storebaeltsbroen, ensures that the weekend discount only works for cars
+		/// Constructor - Tickets for Vehicles on Storebaeltsbroen, ensures that the weekend discount only works for cars and that brobizz discount is implemented after weekend discount
 		/// </summary>
 		/// <param name="date">type: DayOfWeek - represents the day of week the car is crossing the bridge</param>
 		/// <param name="vehicle">type: Vehicle - represents the vehicle that crosses the bridge</param>
