@@ -4,11 +4,20 @@ namespace StoreBaeltTicketLibrary
 {
 	public class Ticket
 	{
+		#region Properties
 		public DayOfWeek Date { get; set; }
 		public Vehicle Vehicle { get; set; }
 		public double Price { get; set; }
-		
 
+		#endregion
+
+		#region Constructor
+		/// <summary>
+		/// Constructor - Tickets for Vehicles on Storebaeltsbroen, ensures that the weekend discount only works for cars
+		/// </summary>
+		/// <param name="date">type: DayOfWeek - represents the day of week the car is crossing the bridge</param>
+		/// <param name="vehicle">type: Vehicle - represents the vehicle that crosses the bridge</param>
+		/// <param name="brobizz">type: bool - condition determining if there is brobizz discount (condition true)</param>
 		public Ticket(DayOfWeek date, Vehicle vehicle, bool brobizz)
 		{
 			if (vehicle.GetType() == typeof(Car))
@@ -36,9 +45,17 @@ namespace StoreBaeltTicketLibrary
 			Vehicle = vehicle;
 		}
 
+		#endregion
+
+		#region Methods
+		/// <summary>
+		/// Method for returning the ticket price
+		/// </summary>
+		/// <returns>type: double</returns>
 		public double TicketPrice()
 		{
 			return Price;
 		}
+		#endregion
 	}
 }

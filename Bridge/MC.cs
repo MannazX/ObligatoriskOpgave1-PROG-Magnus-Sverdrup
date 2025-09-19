@@ -8,23 +8,30 @@ namespace Bridge
 {
 	public class MC : Vehicle
 	{
+		#region Properties
 		public string Liscenseplate { get; set; }
 		public DateTime Date { get; set; }
 
+		#endregion
+
+		#region Constructor
 		/// <summary>
 		/// Constructor for the instanciation of the Car object 
 		/// </summary>
-		/// <param name="liscenseplate"></param>
+		/// <param name="liscenseplate">type: string</param>
 		public MC(string liscenseplate) : base(liscenseplate)
 		{
 			Liscenceplate = liscenseplate;
 			Date = DateTime.Today;
 		}
 
+		#endregion
+
+		#region Methods
 		/// <summary>
-		/// Price for the MC to cross the bridge
+		/// Method returning price for the MC to cross the bridge
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>type: double</returns>
 		public override double Price(bool brobizz)
 		{
 			double price = 120;
@@ -39,13 +46,13 @@ namespace Bridge
 		}
 
 		/// <summary>
-		/// Vehicle Type for the vehicle crossing the bridge
+		/// Method for returning vehicle type: MC
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>type: string</returns>
 		public override string VehicleType()
 		{
 			return "MC";
 		}
-
+		#endregion
 	}
 }

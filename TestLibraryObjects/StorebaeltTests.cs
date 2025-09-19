@@ -40,7 +40,7 @@ namespace TestLibraryObjects
 			Assert.AreEqual(price, 207);
 
 		}
-
+		
 		[TestMethod]
 		public void TestMCTicket()
 		{
