@@ -9,6 +9,11 @@ serverSocket.bind(('', serverport))
 serverSocket.listen(3) # 3 Clients can access the server at a time
 print("Server is ready to recieve")
 
+### Client Input 
+# random 1 10
+# add 2 5
+# subtract 5 3
+
 def numOperationService(connectionSocket):
     """
     Service for clients to perform the following number operations: 
@@ -41,6 +46,7 @@ def numOperationService(connectionSocket):
             outMessage = str(diff) + "\n"
             connectionSocket.send(outMessage.encode())
 
+### Client Input
 # {"random":{"num1":1, "num2":10}}
 # {"add":{"num1":2,"num2":5}}
 # {"subtract":{"num1":5, "num2":3}}
