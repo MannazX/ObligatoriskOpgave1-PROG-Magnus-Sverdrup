@@ -58,7 +58,7 @@ namespace TestLibraryObjects
 		public void TestOresundMCPrice()
 		{
 			// Arrange
-			Vehicle mc = new MC("RL-823");
+			Vehicle mc = new OresundMC("RL-823");
 
 			// Act
 			double price = mc.Price(false);
@@ -72,7 +72,7 @@ namespace TestLibraryObjects
 		public void TestOresundMCVehicleType()
 		{
 			// Arrange
-			Vehicle mc = new MC("RL-823");
+			Vehicle mc = new OresundMC("RL-823");
 
 			// Act
 			string type = mc.VehicleType();
@@ -101,7 +101,7 @@ namespace TestLibraryObjects
 		public void TestOresundCarBrobizz()
 		{
 			// Arrange
-			OresundCar car = new OresundCar("UT-288-LR");
+			Vehicle car = new OresundCar("UT-288");
 
 			// Act
 			double price = car.Price(true);
@@ -115,7 +115,7 @@ namespace TestLibraryObjects
 		public void TestOresundMCBrobizz()
 		{
 			// Arrange
-			OresundMC mc = new OresundMC("KI-779-LR");
+			Vehicle mc = new OresundMC("KI-779");
 
 			// Act
 			double price = mc.Price(true);
