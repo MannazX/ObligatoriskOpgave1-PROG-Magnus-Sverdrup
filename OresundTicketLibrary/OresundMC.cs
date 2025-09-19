@@ -30,7 +30,7 @@ namespace OresundTicketLibrary
 
 		#region Methods
 		/// <summary>
-		/// Method for returning the price with including brobizz discount if applicable 
+		/// Overriding method from base class for returning the price with including brobizz discount if applicable 
 		/// </summary>
 		/// <param name="brobizz">type: bool - condition if brobizz discount applies (condition true)</param>
 		/// <returns>type: double</returns>

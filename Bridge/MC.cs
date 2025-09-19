@@ -16,7 +16,7 @@ namespace Bridge
 
 		#region Constructor
 		/// <summary>
-		/// Constructor for the instanciation of the Car object 
+		/// Constructor for the instanciation of the MC object - Inheriting from the Vehicle base class
 		/// </summary>
 		/// <param name="liscenseplate">type: string</param>
 		public MC(string liscenseplate) : base(liscenseplate)
@@ -29,7 +29,7 @@ namespace Bridge
 
 		#region Methods
 		/// <summary>
-		/// Method returning price for the MC to cross the bridge
+		/// Overriding method from base class for returning price for the MC to cross the bridge
 		/// </summary>
 		/// <returns>type: double</returns>
 		public override double Price(bool brobizz)

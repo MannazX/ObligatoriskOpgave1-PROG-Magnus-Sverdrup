@@ -10,9 +10,9 @@
 
 		#region Constructor
 		/// <summary>
-		/// Constructor for the instanciation of the Car object
+		/// Constructor for the instanciation of the Car object - Inheriting from the Vehicle base class
 		/// </summary>
-		/// <param name="liscenseplate">type: string - Liscense plate for a vehicle crossing the bridge</param>
+		/// <param name="liscenseplate">type: string</param>
 		public Car(string liscenseplate) : base(liscenseplate)
 		{
             Liscenceplate = liscenseplate;
@@ -23,7 +23,7 @@
 
 		#region Methods
 		/// <summary>
-		/// Method for returning price for the car to cross the bridge
+		/// Overriding method from base class for returning price for the car to cross the bridge
 		/// </summary>
 		/// <returns>type: double</returns>
 		public override double Price(bool brobizz)
