@@ -84,7 +84,6 @@ def numOperationJsonService(connectionSocket):
                 connectionSocket.send(outMessage.encode())
             elif keyList[0] == "subtract":
                 args = msg["subtract"]
-                print(args)
                 num1 = int(args["num1"])
                 num2 = int(args["num2"])
                 diff = num1 - num2
