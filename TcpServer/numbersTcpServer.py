@@ -65,10 +65,11 @@ def numOperationJsonService(connectionSocket):
         if message == "exit":
             break
         try:
-            msg = json.load(message)
+            msg = json.loads(message)
             keyList = list(msg.keys())
             if keyList[0] == "random":
                 args = msg["random"]
+                print(args)
                 num1 = int(args["num1"])
                 num2 = int(args["num2"])
                 result = random.randint(num1, num2)
@@ -83,8 +84,9 @@ def numOperationJsonService(connectionSocket):
                 connectionSocket.send(outMessage.encode())
             elif keyList[0] == "subtract":
                 args = msg["subtract"]
-                num1 = int(msg["num1"])
-                num2 = int(msg["num2"])
+                print(args)
+                num1 = int(args["num1"])
+                num2 = int(args["num2"])
                 diff = num1 - num2
                 outMessage = str(diff) + "\n"
                 connectionSocket.send(outMessage.encode())
@@ -95,6 +97,6 @@ def numOperationJsonService(connectionSocket):
 while True:
     connectionSocket, addr = serverSocket.accept()
     print(f"Connection established with {addr}")
-    threading.Thread(target=numOperationService, args=(connectionSocket,)).start()
-    #threading.Thread(target=numOperationJsonService, args=(connectionSocket,)).start()
+    #threading.Thread(target=numOperationService, args=(connectionSocket,)).start()
+    threading.Thread(target=numOperationJsonService, args=(connectionSocket,)).start()
     break
