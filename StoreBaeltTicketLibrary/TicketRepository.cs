@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StoreBaeltTicketLibrary
 {
-	public class TicketRepository
+	public class TicketRepository : ITicketRepository
 	{
 		private static List<Ticket> _tickets;
 		private static int _count = 0;
