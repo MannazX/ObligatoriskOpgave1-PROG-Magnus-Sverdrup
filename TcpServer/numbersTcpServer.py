@@ -69,7 +69,6 @@ def numOperationJsonService(connectionSocket):
             keyList = list(msg.keys())
             if keyList[0] == "random":
                 args = msg["random"]
-                print(args)
                 num1 = int(args["num1"])
                 num2 = int(args["num2"])
                 result = random.randint(num1, num2)

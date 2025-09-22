@@ -21,10 +21,10 @@ namespace TestLibraryObjects
 
 			// Act
 			repo.Add(ticket);
-			bool check = repo.Count > 0;
+			int check = 1; // Number of items added to the list - Ans: 1
 
 			// Assert
-			Assert.IsTrue(check);
+			Assert.AreEqual(check, repo.Count);
 
 		}
 
@@ -43,10 +43,10 @@ namespace TestLibraryObjects
 			repo.Add(t2);
 			repo.Add(t3);
 			List<Ticket> tickets = repo.GetAll();
-			bool check = repo.Count == tickets.Count;
+			int check = 3; // Number of items added to the list - Ans: 3
 
 			// Assert
-			Assert.IsTrue(check);
+			Assert.AreEqual(check, tickets.Count);
 
 		}
 
@@ -68,10 +68,9 @@ namespace TestLibraryObjects
 			repo.Add(t2);
 			repo.Add(t3);
 			List<Ticket> tickets = repo.GetByLiscenseplate(lp1).ToList();
-			bool check = repo.Count > tickets.Count;
-
+			
 			// Assert
-			Assert.IsTrue(check);
+			Assert.AreNotEqual(repo.Count, tickets.Count); // Repository: 3, Tickets Retrieved by Liscense Plate: 2
 
 		}
 	}
