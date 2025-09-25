@@ -24,12 +24,11 @@ namespace StoreBaeltTicketLibrary
 			{
 				if (date == DayOfWeek.Saturday || date == DayOfWeek.Sunday)
 				{
-					double weekendDiscount = 1 - 0.15;
-					Price = vehicle.Price(false) * weekendDiscount;
+					Price = vehicle.Price(false) * (1 - 0.15);
 					if (brobizz)
 					{
-						double brobizzDiscount = 1 - 0.1;
-						Price *= brobizzDiscount;
+						
+						Price *= (1 - 0.1);
 					}
 				}
 				else
