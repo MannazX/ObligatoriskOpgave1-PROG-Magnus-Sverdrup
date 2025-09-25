@@ -27,7 +27,6 @@ namespace StoreBaeltTicketLibrary
 					Price = vehicle.Price(false) * (1 - 0.15);
 					if (brobizz)
 					{
-						
 						Price *= (1 - 0.1);
 					}
 				}
