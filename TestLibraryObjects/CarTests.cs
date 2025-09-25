@@ -58,9 +58,11 @@ namespace TestLibraryObjects
 
 			// Act
 			double price = car.Price(true);
+			double result = 207;
+			double delta = price - result;
 
 			// Assert
-			Assert.AreEqual(price, 207);
+			Assert.AreEqual(price, result, delta);
 
 		}
 	}

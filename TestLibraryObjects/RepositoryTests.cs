@@ -20,11 +20,12 @@ namespace TestLibraryObjects
 			TicketRepository repo = new TicketRepository();
 
 			// Act
+			int countBefore = repo.Count;
 			repo.Add(ticket);
-			int check = 1; // Number of items added to the list - Ans: 1
+			int countAfter = repo.Count;
 
 			// Assert
-			Assert.AreEqual(check, repo.Count);
+			Assert.AreEqual(countBefore + 1, countAfter);
 
 		}
 
@@ -39,14 +40,14 @@ namespace TestLibraryObjects
 			TicketRepository repo = new TicketRepository();
 
 			// Act
+			int countBefore = repo.Count;
 			repo.Add(t1);
 			repo.Add(t2);
 			repo.Add(t3);
-			List<Ticket> tickets = repo.GetAll();
-			int check = 3; // Number of items added to the list - Ans: 3
-
+			int countAfter = repo.Count;
+			
 			// Assert
-			Assert.AreEqual(check, tickets.Count);
+			Assert.AreEqual(countBefore + 3, countAfter);
 
 		}
 
@@ -66,11 +67,12 @@ namespace TestLibraryObjects
 			// Act
 			repo.Add(t1);
 			repo.Add(t2);
-			repo.Add(t3);
-			List<Ticket> tickets = repo.GetByLiscenseplate(lp1).ToList();
-			
+			repo.Add(t3); // Different liscense plate 
+			List<Ticket> tickets1 = repo.GetByLiscenseplate(lp1).ToList();
+			List<Ticket> tickets2 = repo.GetByLiscenseplate(lp2).ToList();
+
 			// Assert
-			Assert.AreNotEqual(repo.Count, tickets.Count); // Repository: 3, Tickets Retrieved by Liscense Plate: 2
+			Assert.AreNotEqual(tickets1.Count, tickets2.Count); // Repository: 3, Tickets Retrieved by Liscense Plate: 2
 
 		}
 	}

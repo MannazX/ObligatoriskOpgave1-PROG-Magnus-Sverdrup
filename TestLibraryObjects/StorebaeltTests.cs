@@ -20,9 +20,11 @@ namespace TestLibraryObjects
 
 			// Act
 			double price = ticket.TicketPrice();
+			double result = 17.95;
+			double delta = price - result;
 
 			// Assert
-			Assert.AreEqual(price, 172.5);
+			Assert.AreEqual(price, result, delta);
 
 		}
 

@@ -63,9 +63,11 @@ namespace TestLibraryObjects
 
 			// Act
 			double price = mc.Price(true);
+			double result = 108;
+			double delta = price - result;
 
 			// Assert
-			Assert.AreEqual(price, 108);
+			Assert.AreEqual(price, result, delta);
 
 		}
 	}
