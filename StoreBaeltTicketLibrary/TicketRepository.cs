@@ -37,20 +37,6 @@ namespace StoreBaeltTicketLibrary
 		}
 
 		/// <summary>
-		/// Method for removing a ticket from the repository list, count is decremented when an item removed, cannot remove from an empty list
-		/// </summary>
-		/// <param name="ticket">type: Ticket - item to remove from list</param>
-		/// <exception cref="Exception">Exception thrown if attempt to remove from an empty list</exception>
-		public void Delete(Ticket ticket)
-		{
-			if (_tickets.Count == 0)
-			{
-				throw new Exception("List is Empty");
-			}
-			_tickets.Remove(ticket);
-		}
-
-		/// <summary>
 		/// Method for getting all tickets in the list
 		/// </summary>
 		/// <returns>type: List<Ticket></returns>
