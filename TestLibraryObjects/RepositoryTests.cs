@@ -76,7 +76,7 @@ namespace TestLibraryObjects
 			List<Ticket> tickets2 = repo.GetByLiscenseplate(lp2).ToList();
 
 			// Assert
-			Assert.AreNotEqual(tickets1.Count, tickets2.Count); // Repository: 3, Tickets Retrieved by Liscense Plate: 2
+			Assert.AreNotEqual(tickets1.Count, tickets2.Count); // Tickets with lp1: 2, Tickets with lp2: 1
 
 		}
 	}
