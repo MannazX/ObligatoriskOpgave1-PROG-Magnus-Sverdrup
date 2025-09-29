@@ -2,6 +2,7 @@
 using StoreBaeltTicketLibrary;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace TestLibraryObjects
 	[TestClass]
 	public sealed class RepositoryTests
 	{
+		[ExcludeFromCodeCoverage]
 		[TestMethod]
 		public void TestAddTicket()
 		{
@@ -29,6 +31,7 @@ namespace TestLibraryObjects
 
 		}
 
+		[ExcludeFromCodeCoverage]
 		[TestMethod]
 		public void TestGetAllTickets()
 		{
@@ -51,6 +54,7 @@ namespace TestLibraryObjects
 
 		}
 
+		[ExcludeFromCodeCoverage]
 		[TestMethod]
 		public void TestGetByLiscenseplate()
 		{
