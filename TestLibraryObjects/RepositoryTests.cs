@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace TestLibraryObjects
 {
+	[ExcludeFromCodeCoverage]
 	[TestClass]
 	public sealed class RepositoryTests
 	{
-		[ExcludeFromCodeCoverage]
 		[TestMethod]
 		public void TestAddTicket()
 		{
@@ -31,7 +31,6 @@ namespace TestLibraryObjects
 
 		}
 
-		[ExcludeFromCodeCoverage]
 		[TestMethod]
 		public void TestGetAllTickets()
 		{
